@@ -39,9 +39,11 @@ export const PostsScreen = ({ route, navigation }) => {
   const { login, email, avatarImage } = useSelector((state) => state.auth);
 
   const [posts, setPosts] = useState([]);
-
   const addLike = async (postId, likesQuantity) => {
     try {
+      if (!likesQuantity) {
+        likesQuantity = 0;
+      }
       const postDocRef = doc(firestore, "posts", postId);
       await updateDoc(postDocRef, {
         likesQuantity: likesQuantity + 1,

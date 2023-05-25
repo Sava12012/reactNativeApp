@@ -89,6 +89,7 @@ export const CreatePostsScreen = ({ route, navigation }) => {
         userId,
         login,
         regionName,
+        commentsQuantity: 0,
         // postRef,
       });
       Alert.alert(`Ваша публікація пройшла успішно`);
@@ -97,7 +98,6 @@ export const CreatePostsScreen = ({ route, navigation }) => {
       console.log("error-message", error.message);
     }
   };
-
   const onPublish = () => {
     if (!title.trim() || !location) {
       Alert.alert(`Усі поля мають бути заповнені!`);

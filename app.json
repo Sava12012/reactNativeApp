@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "rnNewHomework",
-    "slug": "rnNewHomework",
+    "name": "AwesomeApp",
+    "slug": "awesome-app",
+    "description": "This is an awesome app",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./src/assets/icon.png",
